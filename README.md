@@ -14,15 +14,15 @@ Introduction
 ------------
 
 Android N introduces support for drag and drop between applications,
-augmenting the existing APIs that have enabled this within a single 
+augmenting the existing APIs that have enabled this within a single
 window before.
 
-To start a drag operation you need to call `View.startDragAndDrop`. 
+To start a drag operation you need to call `View.startDragAndDrop`.
 Which gesture or action triggers this is up to you as an app developer.
-The API guide recommends doing this from 
+The API guide recommends doing this from
 `View.OnLongClickListener.onLongClick` and this seems to be the de-facto
-standard, but you are free to use other gestures (single tap, tap and drag 
-etc). 
+standard, but you are free to use other gestures (single tap, tap and drag
+etc).
 However, if you go for a unconventional drag start gesture, note that
 the framework implementation assumes that the pointer (touch or mouse)
 is down while the drag is starting, and the most recent touch/click
@@ -34,16 +34,16 @@ than a long click).
 
 By default a drag and drop operation is constrained by the window
 containing the view that started the drag.
-To enable cross-window and cross-app drag and drop add 
+To enable cross-window and cross-app drag and drop add
 `View.DRAG_FLAG_GLOBAL` to the flags passed to the `View.startDragAndDrop`
-call. 
+call.
 
-If a Uri requiring permission grants is being sent, then the 
-`android.view.View.DRAG_FLAG_GLOBAL_URI_READ` and/or the 
+If a Uri requiring permission grants is being sent, then the
+`android.view.View.DRAG_FLAG_GLOBAL_URI_READ` and/or the
 `android.view.View.DRAG_FLAG_GLOBAL_URI_WRITE` flags must be used also.
 To access content URIs requiring permissions on the receiving side, the target
 app needs to request the `android.view.DropPermissions` from the activity via
-`android.app.Activity.requestDropPermissions`. This permission will stay either 
+`android.app.Activity.requestDropPermissions`. This permission will stay either
 until the activity is alive, or until the `release()` method is called on the
 `android.view.DropPermissions` object.
 
@@ -51,7 +51,7 @@ Pre-requisites
 --------------
 
 - Android SDK 25
-- Android Build Tools v25.0.2
+- Android Build Tools v25.0.3
 - Android Support Repository
 
 Screenshots
@@ -80,7 +80,7 @@ submitting a pull request through GitHub. Please see CONTRIBUTING.md for more de
 License
 -------
 
-Copyright 2016 The Android Open Source Project, Inc.
+Copyright 2017 The Android Open Source Project, Inc.
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for
